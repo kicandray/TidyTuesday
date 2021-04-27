@@ -54,3 +54,4 @@ games %>%
        color = " ",
        title = "Average Simultaneous Players of my Steam Video Game Library in 2020\n")+
   ggsave(here("Tidy2", "output","steamtidy.png"), width = 9, height = 8)
+
