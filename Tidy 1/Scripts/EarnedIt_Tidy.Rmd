@@ -1,0 +1,52 @@
+---
+title: "Earned It, Tidy Tuesday"
+author: "Kevin Candray"
+date: "3/1/2021"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+# Devtools for this particular graph 
+```{r}
+devtools::install_github("hrbrmstr/streamgraph")
+
+```
+
+# Loading the Libs
+```{r}
+library(streamgraph)
+library(tidyr)
+library(dplyr)
+library(gapminder)
+```
+
+# Loading the data and View
+```{r}
+employed <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-02-23/employed.csv')
+earn <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-02-23/earn.csv')
+View(earn)
+View(employed)
+#after looking at the data, I only want to use earn data 
+
+```
+# Cleaning the data
+```{r}
+#earn %>% 
+ # group_by(race, age) %>% 
+  #summarise(median_weekly_earn = mean(median_weekly_earn))
+#earn %>% 
+  #select(race, median_weekly_earn, year, age) %>% 
+  #tidyr::gather(race, median_weekly_earn, -year, age) %>% 
+ # group_by(race, age) 
+  #tally(wt = value) 
+  #ungroup
+#streamgraph(earn, c(race, median_weekly_earn, year))
+```
+

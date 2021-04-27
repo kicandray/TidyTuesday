@@ -16,6 +16,7 @@ library(tidyverse)
 library(lubridate)
 library(ggridges)
 library(stringr)
+library(here)
 #########################################
 # looking to see what was i analyzing 
 netflix_country <- netflix_titles %>%
@@ -65,5 +66,6 @@ net_data %>%
        y = "Year Released",
        title = "Netflix Movie Ratings in the U.S. From 2018-2020",
        caption = "Created by Kevin Candray | TidyTuesday")+
-  ggsave()
+  ggsave(here("Tidy4","Output","netflix.png"),
+         width = 9, height = 9)
                   
