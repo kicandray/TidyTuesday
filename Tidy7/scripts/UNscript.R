@@ -23,4 +23,6 @@ by_country %>%
   scale_x_continuous(labels = percent)+
   labs(x = "% of yes votes in UN", 
        title = "What Countries Votes Yes the Lease Amount of Times")+
-  ggsave
+  ggsave(here("Tidy7","Output","UNyesvote.png"),
+         width = 9, height = 9)
+
