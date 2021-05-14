@@ -18,7 +18,7 @@ brands <- youtube %>%
   mutate(brand = fct_reorder(brand, n)) %>% 
   ggplot(aes(n, brand))+
   geom_col()
-
+######################################
 unique(youtube$brand)
 # only 10 different brands
 # what do the 10 brands like to use in their ads such as the catgories listed as columns
